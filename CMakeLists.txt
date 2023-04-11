@@ -8,7 +8,7 @@ add_library(hopscotch_map INTERFACE)
 # Use tsl::hopscotch_map as target, more consistent with other libraries conventions (Boost, Qt, ...)
 add_library(tsl::hopscotch_map ALIAS hopscotch_map)
 
-target_include_directories(hopscotch_map INTERFACE
+target_include_directories(hopscotch_map SYSTEM INTERFACE
                            "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
                            "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>")
 
